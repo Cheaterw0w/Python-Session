@@ -20,7 +20,7 @@ jobs:
 
       - name: Compile
         shell: cmd
-        run: cl /std:c++20 /O2 /EHsc /MT mouselag_final.cpp /link /SUBSYSTEM:WINDOWS user32.lib
+        run: cl /std:c++20 /O2 /EHsc /MT mouselag_final.cpp /link /SUBSYSTEM:WINDOWS user32.lib gdi32.lib advapi32.lib
 
       - name: Verify output
         shell: cmd
